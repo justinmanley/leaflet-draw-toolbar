@@ -14,13 +14,23 @@
     background-size: 270px 30px;
 }
 
-.leaflet-draw-toolbar > li > a {
-    background-image: url('images/spritesheet.png');
-    background-repeat: no-repeat;
+.leaflet-draw-toolbar {
+    .leaflet-draw-edit-edit, .leaflet-draw-edit-remove, .leaflet-draw-draw-polygon,
+    .leaflet-draw-draw-polyline, .leaflet-draw-draw-circle, .leaflet-draw-draw-marker,
+    .leaflet-draw-draw-rectangle {
+        background-image: url('images/spritesheet.png');
+        background-repeat: no-repeat;
+    }
 }
 
-.leaflet-retina .leaflet-draw-toolbar > li > a {
-    background-image: url('images/spritesheet-2x.png');
-    background-size: 270px 30px;
+.leaflet-draw-toolbar {
+    .leaflet-retina {
+        .leaflet-draw-edit-edit, .leaflet-draw-edit-remove, .leaflet-draw-draw-polygon,
+        .leaflet-draw-draw-polyline, .leaflet-draw-draw-circle, .leaflet-draw-draw-marker,
+        .leaflet-draw-draw-rectangle {
+            background-image: url('images/spritesheet-2x.png');
+            background-size: 270px 30px;
+        }
+    }
 }
 

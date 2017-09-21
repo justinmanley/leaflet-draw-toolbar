@@ -171,6 +171,10 @@ module.exports = function(grunt) {
                     'src/edit/control/actions/EditAction.Control.Edit.js',
                     'src/edit/control/actions/EditAction.Control.Delete.js',
                     'src/edit/control/EditToolbar.Control.js',
+                    'src/edit/popup/EditAction.Popup.js',
+                    'src/edit/popup/actions/EditAction.Popup.Edit.js',
+                    'src/edit/popup/actions/EditAction.Popup.Delete.js',
+                    'src/edit/popup/EditToolbar.Popup.js'
                 ],
                 dest: 'dist/leaflet.draw-toolbar.js',
             }
