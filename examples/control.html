@@ -32,11 +32,10 @@
 			className: 'leaflet-draw-toolbar'
 		}).addTo(map);
 
-        // TODO(justinmanley): Add EditToolbar to example.
-		// new L.EditToolbar.Control({
-	    //		position: 'topleft',
-	    //		className: 'leaflet-draw-toolbar'
-		// }).addTo(map, drawnItems);
+        new L.Toolbar2.EditToolbar.Control({
+            position: 'topleft',
+            className: 'leaflet-draw-toolbar'
+        }).addTo(map, drawnItems);
 
 		map.on('draw:created', function(evt) {
 			var type = evt.layerType,

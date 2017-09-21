@@ -123,7 +123,7 @@ module.exports = function(grunt) {
             },
             source: {
                 files: [
-                    'src/*.js',
+                    'src/**',
                     'test/**',
                     'Gruntfile.js'
                 ],
@@ -163,6 +163,14 @@ module.exports = function(grunt) {
                     'src/draw/control/draw-actions/DrawAction.Polyline.js',
                     'src/draw/control/draw-actions/DrawAction.Rectangle.js',
                     'src/draw/control/DrawToolbar.Control.js',
+                    'src/edit/EditToolbar.js',
+                    'src/edit/EditAction.js',
+                    'src/edit/control/EditAction.Control.js',
+                    'src/edit/control/subactions/EditAction.Control.Save.js',
+                    'src/edit/control/subactions/EditAction.Control.Undo.js',
+                    'src/edit/control/actions/EditAction.Control.Edit.js',
+                    'src/edit/control/actions/EditAction.Control.Delete.js',
+                    'src/edit/control/EditToolbar.Control.js',
                 ],
                 dest: 'dist/leaflet.draw-toolbar.js',
             }
