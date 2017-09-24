@@ -17,8 +17,8 @@ drawn on the map.
 
 Interactive examples:
 
-  - [control-style toolbar][examples/control.html]
-  - [popup-style tooblar][examples/popup.html]
+  - [control-style toolbar](examples/control.html)
+  - [popup-style tooblar](examples/popup.html)
 
 The toolbars in this library are interoperable with the toolbars in
 Leaflet.draw, so both can be used on the same webpage (see 
@@ -27,7 +27,7 @@ Leaflet.draw, so both can be used on the same webpage (see
 For more information on Leaflet.toolbar, see the [API Reference](https://github.com/leaflet/Leaflet.Toolbar/wiki/API-Reference) and [Building custom toolbars](https://github.com/leaflet/Leaflet.Toolbar/wiki/Building-custom-toolbars) on the wiki.
 
 Usage
-=====
+-----
 
 Include Leaflet.toolbar and this library: `npm install leaflet-toolbar leaflet-draw-toolbar`.
 
@@ -65,8 +65,10 @@ new LeafletToolbar.EditToolbar.Popup({
 Note that `drawnItems` is the `L.Layer` containing the items drawn on the map.
 
 Development
-============
+-----------
 
 Run `grunt`. This will launch a PhantomJS headless browser and watch for
 changes. When you change a file, the JS and CSS will be linted, tested,
 and rebuilt.
+
+Note: This package is based on [Leaflet.draw#354](https://github.com/Leaflet/Leaflet.draw/pull/354).
