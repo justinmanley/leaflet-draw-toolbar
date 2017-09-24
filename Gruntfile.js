@@ -43,6 +43,7 @@ module.exports = function(grunt) {
                 smarttabs: true,
                 globals: {
                     L: false,
+                    LeafletToolbar: false,
 
                     // Mocha
 
@@ -154,15 +155,14 @@ module.exports = function(grunt) {
                 },
                 src: [
                     'src/draw/DrawAction.js',
+                    'src/draw/control/subactions/DrawAction.Cancel.js',
+                    'src/draw/control/subactions/DrawAction.RemoveLastPoint.js',
+                    'src/draw/control/actions/DrawAction.Circle.js',
+                    'src/draw/control/actions/DrawAction.Marker.js',
+                    'src/draw/control/actions/DrawAction.Polygon.js',
+                    'src/draw/control/actions/DrawAction.Polyline.js',
+                    'src/draw/control/actions/DrawAction.Rectangle.js',
                     'src/draw/DrawToolbar.js',
-                    'src/draw/control/actions/DrawAction.Cancel.js',
-                    'src/draw/control/actions/DrawAction.RemoveLastPoint.js',
-                    'src/draw/control/draw-actions/DrawAction.Circle.js',
-                    'src/draw/control/draw-actions/DrawAction.Marker.js',
-                    'src/draw/control/draw-actions/DrawAction.Polygon.js',
-                    'src/draw/control/draw-actions/DrawAction.Polyline.js',
-                    'src/draw/control/draw-actions/DrawAction.Rectangle.js',
-                    'src/draw/control/DrawToolbar.Control.js',
                     'src/edit/EditToolbar.js',
                     'src/edit/EditAction.js',
                     'src/edit/control/EditAction.Control.js',
@@ -200,7 +200,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('build:js', [
         'jshint',
-        'karma:development:run',
+//        'karma:development:run',
         'coverage',
         'concat:dist',
         'uglify:dist'

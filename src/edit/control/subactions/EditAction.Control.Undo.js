@@ -1,10 +1,10 @@
-L.Toolbar2.EditAction.Control.Undo = L.ToolbarAction.extend({
+LeafletToolbar.EditAction.Control.Undo = LeafletToolbar.ToolbarAction.extend({
     options: {
         toolbarIcon: { html: 'Undo' }
     },
     initialize: function(map, featureGroup, editing) {
         this.editing = editing;
-        L.ToolbarAction.prototype.initialize.call(this);
+        LeafletToolbar.ToolbarAction.prototype.initialize.call(this);
     },
     addHooks: function() {
         this.editing.revertLayers();

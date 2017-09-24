@@ -1,11 +1,11 @@
-L.Toolbar2.DrawAction.Cancel = L.ToolbarAction.extend({
+LeafletToolbar.DrawAction.Cancel = LeafletToolbar.ToolbarAction.extend({
 	options: {
 		toolbarIcon: { html: 'Cancel' }
 	},
 
 	initialize: function (map, drawing) {
 		this.drawing = drawing;
-		L.ToolbarAction.prototype.initialize.call(this);
+		LeafletToolbar.ToolbarAction.prototype.initialize.call(this);
 	},
 
 	addHooks: function () {
