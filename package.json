@@ -2,6 +2,11 @@
   "name": "leaflet-draw-toolbar",
   "version": "0.1.0",
   "description": "Leaflet.toolbar for Leaflet.draw.",
+  "peerDependencies": {
+    "leaflet": "~0.7.7",
+    "leaflet-draw": "~0.3.2",
+    "leaflet-toolbar": "~0.2.0"
+  },
   "devDependencies": { 
     "autoprefixer": "~7.1.4",
     "chai": "~4.1.2",
