@@ -17,12 +17,13 @@ drawn on the map.
 
 Interactive examples:
 
-  - [control-style toolbar](examples/control.html)
-  - [popup-style tooblar](examples/popup.html)
+  - [control-style toolbar](https://justinmanley.github.io/leaflet-draw-toolbar/examples/control.html)
+  - [popup-style tooblar](https://justinmanley.github.io/leaflet-draw-toolbar/examples/popup.html)
+
 
 The toolbars in this library are interoperable with the toolbars in
 Leaflet.draw, so both can be used on the same webpage (see 
-[example](examples/combined.html).
+[example](https://justinmanley.github.io/leaflet-draw-toolbar/examples/combined.html).
 
 For more information on Leaflet.toolbar, see the [API Reference](https://github.com/leaflet/Leaflet.Toolbar/wiki/API-Reference) and [Building custom toolbars](https://github.com/leaflet/Leaflet.Toolbar/wiki/Building-custom-toolbars) on the wiki.
 
