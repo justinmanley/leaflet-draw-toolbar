@@ -28,13 +28,11 @@
 		}).addTo(map);
 
 		new LeafletToolbar.DrawToolbar({
-			position: 'topleft',
-			className: 'leaflet-draw-toolbar'
+			position: 'topleft'
 		}).addTo(map);
 
         new LeafletToolbar.EditToolbar.Control({
-            position: 'topleft',
-            className: 'leaflet-draw-toolbar'
+            position: 'topleft'
         }).addTo(map, drawnItems);
 
 		map.on('draw:created', function(evt) {

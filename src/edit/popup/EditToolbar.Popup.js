@@ -3,7 +3,8 @@ LeafletToolbar.EditToolbar.Popup = LeafletToolbar.Popup.extend({
 		actions: [
 			LeafletToolbar.EditAction.Popup.Edit,
 			LeafletToolbar.EditAction.Popup.Delete
-		]
+		],
+        className: 'leaflet-draw-toolbar'
 	},
 
 	onAdd: function (map) {

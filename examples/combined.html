@@ -67,7 +67,6 @@
 
 			layer.on('click', function(event) {
 				new LeafletToolbar.EditToolbar.Popup(event.latlng, {
-					className: 'leaflet-draw-toolbar',
 					actions: editActions
 				}).addTo(map, layer);
 			});
