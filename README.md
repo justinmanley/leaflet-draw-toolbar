@@ -72,4 +72,4 @@ Run `grunt`. This will launch a PhantomJS headless browser and watch for
 changes. When you change a file, the JS and CSS will be linted, tested,
 and rebuilt.
 
-Note: This package is based on [Leaflet.draw#354](https://github.com/Leaflet/Leaflet.draw/pull/354).
+Note: This package is based on [Leaflet.draw#354](https://github.com/Leaflet/Leaflet.draw/pull/354). The icon spritesheet is taken from Leaflet.draw.
