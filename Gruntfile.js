@@ -100,6 +100,14 @@ module.exports = function(grunt) {
             }
         },
 
+        copy: {
+            dist: {
+                files: [
+                    { cwd: 'src/images', src: ['**'], dest: 'dist/images', expand: true }
+                ]
+            }
+        },
+
         karma: {
             travis: {
                 configFile: 'test/karma.conf.js',
@@ -200,11 +208,13 @@ module.exports = function(grunt) {
 
     grunt.registerTask('build:js', [
         'jshint',
-//        'karma:development:run',
+        'karma:development:run',
         'coverage',
         'concat:dist',
         'uglify:dist'
     ]);
+
+    grunt.registerTask('build:images', [ 'copy:dist' ]);
 
     grunt.registerTask('build:css', [ 'less', 'autoprefixer', 'cssmin' ]);
 
