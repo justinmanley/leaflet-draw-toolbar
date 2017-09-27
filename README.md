@@ -9,17 +9,21 @@ Leaflet.draw. There are two different styles of toolbars:
 control-style (fixed relative to the window), and popup-style (attached to a
 latlng on the map). Here's what they look like:
 
-![control-style toolbar](examples/control.png)
-![popup-style toolbar](examples/popup.png)
+[GIF of control-style toolbar]: examples/control.gif
+[GIF of popup-style toolbar]: examples/popup.gif
 
+[interactive example (control-style)]: https://justinmanley.github.io/leaflet-draw-toolbar/examples/control.html
+[interactive example (popup-style)]: https://justinmanley.github.io/leaflet-draw-toolbar/examples/popup.html
+
+
+| Control-style toolbar                 | Popup-style toolbar                 |
+|---------------------------------------|-------------------------------------|
+| ![GIF of control-style toolbar][]     | ![GIF of popup-style toolbar][]     |
+| [interactive example (control-style)] | [interactive example (popup-style)] |
+
+Control-style toolbars are like the zoom controls that come with Leaflet.
 Popup-style toolbars provide a natural way for users to interact with features
 drawn on the map.
-
-Interactive examples:
-
-  - [control-style toolbar](https://justinmanley.github.io/leaflet-draw-toolbar/examples/control.html)
-  - [popup-style tooblar](https://justinmanley.github.io/leaflet-draw-toolbar/examples/popup.html)
-
 
 The toolbars in this library are interoperable with the toolbars in
 Leaflet.draw, so both can be used on the same webpage (see 
