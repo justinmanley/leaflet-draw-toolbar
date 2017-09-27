@@ -20,14 +20,14 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">87.23% </span>
+        <span class="strong">87.76% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>41/47</span>
+        <span class='fraction'>43/49</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">60% </span>
+        <span class="strong">58.33% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>6/10</span>
+        <span class='fraction'>7/12</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">85.71% </span>
@@ -35,9 +35,9 @@
         <span class='fraction'>12/14</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">91.11% </span>
+        <span class="strong">91.49% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>41/45</span>
+        <span class='fraction'>43/47</span>
       </div>
     </div>
   </div>
@@ -178,9 +178,22 @@
 133
 134
 135
-136</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -239,10 +252,18 @@
 <span class="cline-any cline-yes">10×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">10×</span>
-<span class="cline-any cline-yes">30×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">60×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -293,6 +314,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">26×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
@@ -313,12 +341,11 @@
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">20×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">window.LeafletToolbar = (L.Layer || L.Class).extend({
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// L.Layer was introduced in Leaflet 1.0 and is not present in earlier releases.
+window.LeafletToolbar = (L.Layer || L.Class).extend({
 	statics: {
 		baseClass: 'leaflet-toolbar'
 	},
-&nbsp;
-	includes: L.Mixin.Events,
 &nbsp;
 	options: {
 		className: '',
@@ -373,8 +400,16 @@
 		this._container = container;
 		this._ul = L.DomUtil.create('ul', className, container);
 &nbsp;
-		/* Ensure that clicks, drags, etc. don't bubble up to the map. */
-		this._disabledEvents = ['click', 'mousemove', 'dblclick'];
+		// Ensure that clicks, drags, etc. don't bubble up to the map.
+		// These are the map events that the L.Draw.Polyline handler listens for.
+		// Note that L.Draw.Polyline listens to 'mouseup', not 'mousedown', but
+		// if only 'mouseup' is silenced, then the map gets stuck in a halfway
+		// state because it receives a 'mousedown' event and is waiting for the
+		// corresponding 'mouseup' event.
+		this._disabledEvents = [
+			'click', 'mousemove', 'dblclick',
+			'mousedown', 'mouseup', 'touchstart'
+		];
 &nbsp;
 		for (j = 0, m = this._disabledEvents.length; j &lt; m; j++) {
 			L.DomEvent.on(this._ul, this._disabledEvents[j], L.DomEvent.stopPropagation);
@@ -430,6 +465,13 @@
 	}
 });
 &nbsp;
+// L.Mixin.Events is replaced by L.Evented in Leaflet 1.0. L.Layer (also
+// introduced in Leaflet 1.0) inherits from L.Evented, so if L.Layer is
+// present, then LeafletToolbar will already support events.
+<span class="missing-if-branch" title="else path not taken" >E</span>if (!L.Evented) {
+    LeafletToolbar.include(L.Mixin.Events);
+}
+&nbsp;
 L.toolbar = {};
 &nbsp;
 var toolbar_class_id = 0;
@@ -454,7 +496,7 @@ L.Map.addInitHook(function() {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Sep 23 2017 11:53:01 GMT-0700 (PDT)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Sep 26 2017 21:39:26 GMT-0700 (PDT)
 </div>
 </div>
 <script src="../prettify.js"></script>

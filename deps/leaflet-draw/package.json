@@ -2,53 +2,49 @@
   "_args": [
     [
       {
-        "raw": "leaflet-draw@~0.3.2",
+        "raw": "leaflet-draw@*",
         "scope": null,
         "escapedName": "leaflet-draw",
         "name": "leaflet-draw",
-        "rawSpec": "~0.3.2",
-        "spec": ">=0.3.2 <0.4.0",
+        "rawSpec": "*",
+        "spec": "*",
         "type": "range"
       },
       "/home/justin/p/leaflet-draw-toolbar"
     ]
   ],
-  "_from": "leaflet-draw@>=0.3.2 <0.4.0",
-  "_id": "leaflet-draw@0.3.2",
+  "_from": "leaflet-draw@*",
+  "_id": "leaflet-draw@0.4.12",
   "_inCache": true,
   "_location": "/leaflet-draw",
-  "_nodeVersion": "6.3.1",
+  "_nodeVersion": "8.1.3",
   "_npmOperationalInternal": {
-    "host": "packages-16-east.internal.npmjs.com",
-    "tmp": "tmp/leaflet-draw-0.3.2.tgz_1470330844545_0.2110917365644127"
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/leaflet-draw-0.4.12.tgz_1503553770356_0.6272255023941398"
   },
   "_npmUser": {
     "name": "ddproxy",
     "email": "ddproxy@gmail.com"
   },
-  "_npmVersion": "3.10.5",
+  "_npmVersion": "5.0.3",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "leaflet-draw@~0.3.2",
+    "raw": "leaflet-draw@*",
     "scope": null,
     "escapedName": "leaflet-draw",
     "name": "leaflet-draw",
-    "rawSpec": "~0.3.2",
-    "spec": ">=0.3.2 <0.4.0",
+    "rawSpec": "*",
+    "spec": "*",
     "type": "range"
   },
   "_requiredBy": [
-    "#DEV:/",
-    "#USER"
+    "#DEV:/"
   ],
-  "_resolved": "https://registry.npmjs.org/leaflet-draw/-/leaflet-draw-0.3.2.tgz",
-  "_shasum": "717ee8fed4c2a9679c12162e1f922d2da503d109",
+  "_resolved": "https://registry.npmjs.org/leaflet-draw/-/leaflet-draw-0.4.12.tgz",
+  "_shasum": "04c9f3506e3b3a8a488ad389381331dc5b2affd8",
   "_shrinkwrap": null,
-  "_spec": "leaflet-draw@~0.3.2",
+  "_spec": "leaflet-draw@*",
   "_where": "/home/justin/p/leaflet-draw-toolbar",
-  "author": {
-    "name": "Jacob Toye"
-  },
   "bugs": {
     "url": "https://github.com/Leaflet/Leaflet.draw/issues"
   },
@@ -56,31 +52,81 @@
     {
       "name": "Jon West",
       "email": "ddproxy@gmail.com"
+    },
+    {
+      "name": "Jacob Toye"
     }
   ],
   "dependencies": {},
   "description": "Vector drawing plugin for Leaflet",
   "devDependencies": {
-    "happen": "~0.1.3",
-    "jake": "~0.7.4",
-    "jshint": "~2.3.0",
-    "karma": "^0.12.19",
-    "karma-coverage": "~0.1.3",
-    "karma-mocha": "~0.1.0",
-    "karma-phantomjs-launcher": "^0.1.4",
-    "leaflet": "~0.7.0",
-    "mocha": "~1.14.0",
-    "phantomjs": "~2.1.3",
-    "uglify-js": "~2.4.3"
+    "eslint": "^3.5.0 <3.6.0",
+    "eslint-config-mourner": "^2.0.1",
+    "git-rev": "^0.2.1",
+    "happen": "^0.3.1",
+    "jake": "^8.0.15",
+    "karma": "^1.3.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-coverage": "~1.1.1",
+    "karma-firefox-launcher": "~1.0.0",
+    "karma-mocha": "^1.2.0",
+    "karma-phantomjs-launcher": "^1.0.2",
+    "karma-safari-launcher": "~1.0.0",
+    "leafdoc": "^1.4.0",
+    "leaflet": ">=0.7.0 <1.1",
+    "mocha": "^3.5.0",
+    "phantomjs-prebuilt": "^2.1.15",
+    "prosthetic-hand": "^1.3.1",
+    "source-map": "^0.5.7",
+    "uglify-js": "^2.8.29",
+    "uglifycss": "0.0.25"
   },
   "directories": {
-    "example": "examples"
+    "example": "docs/example",
+    "doc": "docs/",
+    "lib": "src/"
   },
   "dist": {
-    "shasum": "717ee8fed4c2a9679c12162e1f922d2da503d109",
-    "tarball": "https://registry.npmjs.org/leaflet-draw/-/leaflet-draw-0.3.2.tgz"
+    "integrity": "sha512-vvgJo9jt54ETssDZKni1hue3INU/yf/zJ6ewAshScQRLaLWQ10mWeZVtPkhk8KmxWffeOQk6keN0QoB/0W56hg==",
+    "shasum": "04c9f3506e3b3a8a488ad389381331dc5b2affd8",
+    "tarball": "https://registry.npmjs.org/leaflet-draw/-/leaflet-draw-0.4.12.tgz"
   },
-  "gitHead": "39a256e8dcc28a98908cd3f81ea2827b3f9a9c3d",
+  "eslintConfig": {
+    "root": true,
+    "globals": {
+      "L": true
+    },
+    "env": {
+      "commonjs": true,
+      "amd": true,
+      "node": false
+    },
+    "extends": "mourner",
+    "rules": {
+      "no-mixed-spaces-and-tabs": [
+        2,
+        "smart-tabs"
+      ],
+      "indent": [
+        2,
+        "tab",
+        {
+          "VariableDeclarator": 0
+        }
+      ],
+      "curly": 2,
+      "spaced-comment": 2,
+      "strict": 0,
+      "wrap-iife": 0,
+      "key-spacing": 0,
+      "consistent-return": 0
+    }
+  },
+  "files": [
+    "dist/*",
+    "docs/*"
+  ],
+  "gitHead": "45e0964d260a7a889ff262e8c78592a6e5e2e2ee",
   "homepage": "https://github.com/Leaflet/Leaflet.draw#readme",
   "keywords": [
     "maps",
@@ -110,8 +156,11 @@
     "url": "git+https://github.com/Leaflet/Leaflet.draw.git"
   },
   "scripts": {
-    "build": "jake",
+    "build": "jake build -f ./Jakefile.js",
+    "docs": "jake docs",
+    "release": "./build/publish.sh",
     "test": "jake test"
   },
-  "version": "0.3.2"
+  "style": "dist/leaflet.draw.css",
+  "version": "0.4.12"
 }

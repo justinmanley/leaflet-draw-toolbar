@@ -2,25 +2,25 @@
   "_args": [
     [
       {
-        "raw": "leaflet-toolbar@~0.2.0",
+        "raw": "leaflet-toolbar@~0.3.0",
         "scope": null,
         "escapedName": "leaflet-toolbar",
         "name": "leaflet-toolbar",
-        "rawSpec": "~0.2.0",
-        "spec": ">=0.2.0 <0.3.0",
+        "rawSpec": "~0.3.0",
+        "spec": ">=0.3.0 <0.4.0",
         "type": "range"
       },
       "/home/justin/p/leaflet-draw-toolbar"
     ]
   ],
-  "_from": "leaflet-toolbar@>=0.2.0 <0.3.0",
-  "_id": "leaflet-toolbar@0.2.0",
+  "_from": "leaflet-toolbar@>=0.3.0 <0.4.0",
+  "_id": "leaflet-toolbar@0.3.0",
   "_inCache": true,
   "_location": "/leaflet-toolbar",
   "_nodeVersion": "7.9.0",
   "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/leaflet-toolbar-0.2.0.tgz_1506230783855_0.11464246548712254"
+    "tmp": "tmp/leaflet-toolbar-0.3.0.tgz_1506487441535_0.0993720970582217"
   },
   "_npmUser": {
     "name": "justinmanley",
@@ -29,21 +29,22 @@
   "_npmVersion": "4.2.0",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "leaflet-toolbar@~0.2.0",
+    "raw": "leaflet-toolbar@~0.3.0",
     "scope": null,
     "escapedName": "leaflet-toolbar",
     "name": "leaflet-toolbar",
-    "rawSpec": "~0.2.0",
-    "spec": ">=0.2.0 <0.3.0",
+    "rawSpec": "~0.3.0",
+    "spec": ">=0.3.0 <0.4.0",
     "type": "range"
   },
   "_requiredBy": [
-    "#DEV:/"
+    "#DEV:/",
+    "#USER"
   ],
-  "_resolved": "https://registry.npmjs.org/leaflet-toolbar/-/leaflet-toolbar-0.2.0.tgz",
-  "_shasum": "f0a45f774aa1da51f61fa09875719a317bef7ed0",
+  "_resolved": "https://registry.npmjs.org/leaflet-toolbar/-/leaflet-toolbar-0.3.0.tgz",
+  "_shasum": "66e3b4fc276bdef954956f4699d1802459c5938c",
   "_shrinkwrap": null,
-  "_spec": "leaflet-toolbar@~0.2.0",
+  "_spec": "leaflet-toolbar@~0.3.0",
   "_where": "/home/justin/p/leaflet-draw-toolbar",
   "author": {
     "name": "Justin Manley"
@@ -81,8 +82,7 @@
     "karma-mocha-reporter": "~2.2.4",
     "karma-phantomjs-launcher": "~1.0.4",
     "karma-safari-launcher": "~1.0.0",
-    "leaflet": "~0.7.7",
-    "leaflet-draw": "~0.3.2",
+    "leaflet": "~1.2.0",
     "matchdep": "~2.0.0",
     "mocha": "~3.5.2",
     "sinon": "~3.2.1",
@@ -95,10 +95,10 @@
     "tests": "./test"
   },
   "dist": {
-    "shasum": "f0a45f774aa1da51f61fa09875719a317bef7ed0",
-    "tarball": "https://registry.npmjs.org/leaflet-toolbar/-/leaflet-toolbar-0.2.0.tgz"
+    "shasum": "66e3b4fc276bdef954956f4699d1802459c5938c",
+    "tarball": "https://registry.npmjs.org/leaflet-toolbar/-/leaflet-toolbar-0.3.0.tgz"
   },
-  "gitHead": "54fe9a05e994d58cb926951c1b25b9ea4efc5236",
+  "gitHead": "fb935befa99d753bdd0deb0ce2cad20335783459",
   "homepage": "https://github.com/Leaflet/Leaflet.toolbar#readme",
   "keywords": [
     "maps",
@@ -116,6 +116,9 @@
   ],
   "name": "leaflet-toolbar",
   "optionalDependencies": {},
+  "peerDependencies": {
+    "leaflet": "*"
+  },
   "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
@@ -125,5 +128,5 @@
     "coveralls": "PHANTOM=`ls ./coverage | grep PhantomJS` && cat \"coverage/$PHANTOM/lcov.info\" | coveralls",
     "test": "grunt travis"
   },
-  "version": "0.2.0"
+  "version": "0.3.0"
 }
