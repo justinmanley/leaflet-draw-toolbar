@@ -20,7 +20,18 @@ LeafletToolbar.EditAction.Popup.Edit = LeafletToolbar.ToolbarAction.extend({
 		map.removeLayer(this.toolbar);
 		
 		map.on('click', function () {
+			this.save();
 			shape.editing.disable();
-		});
+		}, this);
+	},
+
+	save: function() {
+		var map = this._map,
+			shape = this._shape;
+
+		if (shape.edited) {
+			map.fire(L.Draw.Event.EDITED, { layers: L.layerGroup([shape]) });
+		}
+		shape.edited = false;
 	}
 });

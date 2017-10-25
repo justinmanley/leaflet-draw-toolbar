@@ -11,7 +11,12 @@ LeafletToolbar.EditAction.Popup.Delete = LeafletToolbar.ToolbarAction.extend({
 	},
 
 	addHooks: function () {
-		this._map.removeLayer(this._shape);
-		this._map.removeLayer(this.toolbar);
+		var map = this._map;
+
+		map.removeLayer(this._shape);
+		map.removeLayer(this.toolbar);
+
+		console.log('firing draw:deleted');
+		map.fire(L.Draw.Event.DELETED, { layers: L.layerGroup([this._shape]) });
 	}
 });
