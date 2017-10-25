@@ -9,8 +9,8 @@ Leaflet.draw. There are two different styles of toolbars:
 control-style (fixed relative to the window), and popup-style (attached to a
 latlng on the map). Here's what they look like:
 
-[GIF of control-style toolbar]: examples/control.gif
-[GIF of popup-style toolbar]: examples/popup.gif
+[GIF of control-style toolbar]: https://justinmanley.github.io/leaflet-draw-toolbar/examples/control.gif
+[GIF of popup-style toolbar]: https://justinmanley.github.io/leaflet-draw-toolbar/examples/popup.gif
 
 [interactive example (control-style)]: https://justinmanley.github.io/leaflet-draw-toolbar/examples/control.html
 [interactive example (popup-style)]: https://justinmanley.github.io/leaflet-draw-toolbar/examples/popup.html
