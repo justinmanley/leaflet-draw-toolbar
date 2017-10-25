@@ -1,6 +1,6 @@
 {
   "name": "leaflet-draw-toolbar",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Leaflet.toolbar for Leaflet.draw.",
   "peerDependencies": {
     "leaflet": "^1.0.0",
