@@ -1,13 +1,13 @@
-LeafletToolbar.EditAction.Control.Delete = LeafletToolbar.EditAction.fromHandler(
+L.Toolbar2.EditAction.Control.Delete = L.Toolbar2.EditAction.fromHandler(
     L.EditToolbar.Delete,
     {
         className: 'leaflet-draw-edit-remove',
         tooltip: 'Remove features'
     },
-    new LeafletToolbar({
+    new L.Toolbar2({
         actions: [
-            LeafletToolbar.EditAction.Control.Save,
-            LeafletToolbar.EditAction.Control.Undo
+            L.Toolbar2.EditAction.Control.Save,
+            L.Toolbar2.EditAction.Control.Undo
         ]
     })
 );

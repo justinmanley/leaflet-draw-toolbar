@@ -1,5 +1,5 @@
 // TODO: Write better tests.
-describe("LeafletToolbar.EditToolbar.Control", function() {
+describe("L.Toolbar2.EditToolbar.Control", function() {
     beforeEach(function() {
         var container = document.createElement('div');
         container.id = 'map';
@@ -11,9 +11,9 @@ describe("LeafletToolbar.EditToolbar.Control", function() {
     it("Can be added to the map", function() {
         var map = L.map('map'),
             drawnItems = new L.FeatureGroup().addTo(map),
-            toolbar = new LeafletToolbar.EditToolbar.Control().addTo(map, drawnItems);
+            toolbar = new L.Toolbar2.EditToolbar.Control().addTo(map, drawnItems);
 
-        expect(toolbar).to.be.an.instanceof(LeafletToolbar.Control);
+        expect(toolbar).to.be.an.instanceof(L.Toolbar2.Control);
     });
     
     afterEach(function() {

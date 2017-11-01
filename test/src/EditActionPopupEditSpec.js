@@ -1,4 +1,4 @@
-describe("LeafletToolbar.EditAction.Popup.Edit", function() {
+describe("L.Toolbar2.EditAction.Popup.Edit", function() {
     beforeEach(function() {
         var container = document.createElement('div');
         container.id = 'map';
@@ -8,10 +8,10 @@ describe("LeafletToolbar.EditAction.Popup.Edit", function() {
 	it("Should fire a draw:edited event when completed.", function(done) {
 		var map = L.map('map'),
 			shape = L.circle([0, 0], { radius: 1 }),
-			editAction = new LeafletToolbar.EditAction.Popup.Edit(map, shape);
+			editAction = new L.Toolbar2.EditAction.Popup.Edit(map, shape);
 
 		// Necessary so that the popup delete action can remove its toolbar.
-		editAction.toolbar = new LeafletToolbar();
+		editAction.toolbar = new L.Toolbar2();
 
 		map.on('draw:edited', function(evt) {
 			expect(evt.layers.hasLayer(shape)).to.equal(true);

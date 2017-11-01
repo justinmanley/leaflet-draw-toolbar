@@ -1,1 +1,1 @@
-LeafletToolbar.EditAction.Popup = {};
+L.Toolbar2.EditAction.Popup = {};

@@ -1,1 +1,1 @@
-LeafletToolbar.EditAction.Control = {};
+L.Toolbar2.EditAction.Control = {};

@@ -27,11 +27,11 @@
 			attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.'
 		}).addTo(map);
 
-		new LeafletToolbar.DrawToolbar({
+		new L.Toolbar2.DrawToolbar({
 			position: 'topleft'
 		}).addTo(map);
 
-        new LeafletToolbar.EditToolbar.Control({
+        new L.Toolbar2.EditToolbar.Control({
             position: 'topleft'
         }).addTo(map, drawnItems);
 

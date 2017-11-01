@@ -1,13 +1,13 @@
-LeafletToolbar.DrawAction.Polyline = LeafletToolbar.DrawAction.fromHandler(
+L.Toolbar2.DrawAction.Polyline = L.Toolbar2.DrawAction.fromHandler(
     L.Draw.Polyline,
     {
         className: 'leaflet-draw-draw-polyline',
         tooltip: L.drawLocal.draw.toolbar.buttons.polyline
     },
-	new LeafletToolbar({ actions: [LeafletToolbar.DrawAction.Cancel, LeafletToolbar.DrawAction.RemoveLastPoint] })
+	new L.Toolbar2({ actions: [L.Toolbar2.DrawAction.Cancel, L.Toolbar2.DrawAction.RemoveLastPoint] })
 );
 
 // Support for DrawAction.RemoveLastPoint.
-LeafletToolbar.DrawAction.Polyline.prototype.deleteLastVertex = function() {
+L.Toolbar2.DrawAction.Polyline.prototype.deleteLastVertex = function() {
     this._handler.deleteLastVertex();
 }

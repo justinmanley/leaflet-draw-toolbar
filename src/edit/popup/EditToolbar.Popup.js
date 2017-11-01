@@ -1,8 +1,8 @@
-LeafletToolbar.EditToolbar.Popup = LeafletToolbar.Popup.extend({
+L.Toolbar2.EditToolbar.Popup = L.Toolbar2.Popup.extend({
 	options: {
 		actions: [
-			LeafletToolbar.EditAction.Popup.Edit,
-			LeafletToolbar.EditAction.Popup.Delete
+			L.Toolbar2.EditAction.Popup.Edit,
+			L.Toolbar2.EditAction.Popup.Delete
 		],
         className: 'leaflet-draw-toolbar'
 	},
@@ -15,6 +15,6 @@ LeafletToolbar.EditToolbar.Popup = LeafletToolbar.Popup.extend({
 			this.options.anchor = L.point(shape.options.icon.options.popupAnchor);
 		}
 
-		LeafletToolbar.Popup.prototype.onAdd.call(this, map);
+		L.Toolbar2.Popup.prototype.onAdd.call(this, map);
 	}
 });

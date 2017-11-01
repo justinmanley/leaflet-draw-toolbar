@@ -1,4 +1,4 @@
-LeafletToolbar.EditAction.Popup.Delete = LeafletToolbar.ToolbarAction.extend({
+L.Toolbar2.EditAction.Popup.Delete = L.Toolbar2.Action.extend({
 	options: {
 		toolbarIcon: { className: 'leaflet-draw-edit-remove' }
 	},
@@ -7,7 +7,7 @@ LeafletToolbar.EditAction.Popup.Delete = LeafletToolbar.ToolbarAction.extend({
 		this._map = map;
 		this._shape = shape;
 
-		LeafletToolbar.ToolbarAction.prototype.initialize.call(this, map, options);
+		L.Toolbar2.Action.prototype.initialize.call(this, map, options);
 	},
 
 	addHooks: function () {

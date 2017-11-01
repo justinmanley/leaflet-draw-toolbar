@@ -1,8 +1,8 @@
-LeafletToolbar.EditToolbar.Control = LeafletToolbar.Control.extend({
+L.Toolbar2.EditToolbar.Control = L.Toolbar2.Control.extend({
     options: {
         actions: [
-            LeafletToolbar.EditAction.Control.Edit,
-            LeafletToolbar.EditAction.Control.Delete
+            L.Toolbar2.EditAction.Control.Edit,
+            L.Toolbar2.EditAction.Control.Delete
         ],
         className: 'leaflet-draw-toolbar',
     }

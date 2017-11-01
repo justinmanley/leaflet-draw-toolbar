@@ -35,14 +35,14 @@
 		var map = L.map('map').setView([41.7896,-87.5996], 15),
 			drawnItems = new L.FeatureGroup().addTo(map),
 			editActions = [
-                LeafletToolbar.EditAction.Popup.Edit,
-                LeafletToolbar.EditAction.Popup.Delete,
-				LeafletToolbar.ToolbarAction.extendOptions({
+                L.Toolbar2.EditAction.Popup.Edit,
+                L.Toolbar2.EditAction.Popup.Delete,
+				L.Toolbar2.Action.extendOptions({
 					toolbarIcon: { 
 						className: 'leaflet-color-picker', 
 						html: '<span class="fa fa-eyedropper"></span>' 
 					},
-					subToolbar: new LeafletToolbar({ actions: [
+					subToolbar: new L.Toolbar2({ actions: [
 						L.ColorPicker.extendOptions({ color: '#db1d0f' }),
 						L.ColorPicker.extendOptions({ color: '#025100' }),
 						L.ColorPicker.extendOptions({ color: '#ffff00' }),
@@ -55,7 +55,7 @@
 			attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.'
 		}).addTo(map);
 
-		new LeafletToolbar.DrawToolbar({
+		new L.Toolbar2.DrawToolbar({
 			position: 'topleft',
 		}).addTo(map);
 
@@ -66,7 +66,7 @@
 			drawnItems.addLayer(layer);
 
 			layer.on('click', function(event) {
-				new LeafletToolbar.EditToolbar.Popup(event.latlng, {
+				new L.Toolbar2.EditToolbar.Popup(event.latlng, {
 					actions: editActions
 				}).addTo(map, layer);
 			});

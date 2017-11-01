@@ -1,13 +1,13 @@
-LeafletToolbar.DrawAction.Polygon = LeafletToolbar.DrawAction.fromHandler(
+L.Toolbar2.DrawAction.Polygon = L.Toolbar2.DrawAction.fromHandler(
     L.Draw.Polygon,
     {
         className: 'leaflet-draw-draw-polygon',
         tooltip: L.drawLocal.draw.toolbar.buttons.polygon
     },
-	new LeafletToolbar({ actions: [LeafletToolbar.DrawAction.Cancel, LeafletToolbar.DrawAction.RemoveLastPoint] })
+	new L.Toolbar2({ actions: [L.Toolbar2.DrawAction.Cancel, L.Toolbar2.DrawAction.RemoveLastPoint] })
 );
 
 // Support for DrawAction.RemoveLastPoint.
-LeafletToolbar.DrawAction.Polygon.prototype.deleteLastVertex = function() {
+L.Toolbar2.DrawAction.Polygon.prototype.deleteLastVertex = function() {
     this._handler.deleteLastVertex();
 }

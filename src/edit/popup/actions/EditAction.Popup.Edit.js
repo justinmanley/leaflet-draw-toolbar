@@ -1,4 +1,4 @@
-LeafletToolbar.EditAction.Popup.Edit = LeafletToolbar.ToolbarAction.extend({
+L.Toolbar2.EditAction.Popup.Edit = L.Toolbar2.Action.extend({
 	options: {
 		toolbarIcon: { className: 'leaflet-draw-edit-edit' }
 	},
@@ -9,7 +9,7 @@ LeafletToolbar.EditAction.Popup.Edit = LeafletToolbar.ToolbarAction.extend({
 		this._shape = shape;
 		this._shape.options.editing = this._shape.options.editing || {};
 
-		LeafletToolbar.ToolbarAction.prototype.initialize.call(this, map, options);
+		L.Toolbar2.Action.prototype.initialize.call(this, map, options);
 	},
 
 	enable: function () {

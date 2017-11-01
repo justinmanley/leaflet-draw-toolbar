@@ -1,11 +1,11 @@
-LeafletToolbar.DrawToolbar = LeafletToolbar.Control.extend({
+L.Toolbar2.DrawToolbar = L.Toolbar2.Control.extend({
 	options: {
 		actions: [
-			LeafletToolbar.DrawAction.Polygon,
-			LeafletToolbar.DrawAction.Polyline,
-			LeafletToolbar.DrawAction.Marker,
-			LeafletToolbar.DrawAction.Rectangle,
-			LeafletToolbar.DrawAction.Circle
+			L.Toolbar2.DrawAction.Polygon,
+			L.Toolbar2.DrawAction.Polyline,
+			L.Toolbar2.DrawAction.Marker,
+			L.Toolbar2.DrawAction.Rectangle,
+			L.Toolbar2.DrawAction.Circle
 		],
 		className: 'leaflet-draw-toolbar'
 	}

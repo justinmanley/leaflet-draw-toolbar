@@ -1,13 +1,13 @@
-LeafletToolbar.EditAction.Control.Edit = LeafletToolbar.EditAction.fromHandler(
+L.Toolbar2.EditAction.Control.Edit = L.Toolbar2.EditAction.fromHandler(
     L.EditToolbar.Edit,
     {
         className: 'leaflet-draw-edit-edit',
         tooltip: 'Edit features'
     },
-    new LeafletToolbar({
+    new L.Toolbar2({
         actions: [
-            LeafletToolbar.EditAction.Control.Save,
-            LeafletToolbar.EditAction.Control.Undo
+            L.Toolbar2.EditAction.Control.Save,
+            L.Toolbar2.EditAction.Control.Undo
         ]
     })
 );
