@@ -4,6 +4,7 @@ L.ColorPicker = L.Toolbar2.Action.extend({
 	},
 
 	initialize: function(map, shape, options) {
+		this._map = map;
 		this._shape = shape;
 
 		L.setOptions(this, options);
@@ -31,7 +32,7 @@ L.ColorPicker = L.Toolbar2.Action.extend({
 		this._link.appendChild(colorSwatch);
 
 		L.DomEvent.on(this._link, 'click', function() {
-			map.removeLayer(this.toolbar.parentToolbar);
+			this._map.removeLayer(this.toolbar.parentToolbar);
 		}, this);
 	}
 });
