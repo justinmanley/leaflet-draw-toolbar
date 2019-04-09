@@ -47,7 +47,7 @@ You can then include Leaflet.Toolbar in your web application by adding the follo
 
 To add a toolbar for drawing on the map with Leaflet.draw:
 ```javascript
-new LeafletToolbar.DrawToolbar({
+new L.Toolbar2.DrawToolbar({
     position: 'topleft'
 }).addTo(map);
 
@@ -55,7 +55,7 @@ new LeafletToolbar.DrawToolbar({
 
 To add a control-style toolbar for editing features drawn on the map with Leaflet.draw:
 ```javascript
-new LeafletToolbar.EditToolbar.Control({
+new L.Toolbar2.EditToolbar.Control({
     position: 'topleft'
 }).addTo(map, drawnItems);
 ```
@@ -63,7 +63,7 @@ Note that `drawnItems` is the `L.Layer` containing the items drawn on the map.
 
 To add a popup-style toolbar for editing features drawn on the map with Leaflet.draw:
 ```javascript
-new LeafletToolbar.EditToolbar.Popup({
+new L.Toolbar2.EditToolbar.Popup({
     position: 'topleft'
 }).addTo(map, drawnItems);
 ```
