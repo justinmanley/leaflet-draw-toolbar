@@ -12,7 +12,11 @@ L.Toolbar2.EditAction.Popup.Edit = L.Toolbar2.Action.extend({
 		L.Toolbar2.Action.prototype.initialize.call(this, map, options);
 	},
 
-	enable: function () {
+	enable: function (e) {
+		if (e) {
+            L.DomEvent.preventDefault(e);
+        }
+
 		var map = this._map,
 			shape = this._shape;
 
